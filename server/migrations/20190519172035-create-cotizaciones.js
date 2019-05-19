@@ -1,37 +1,36 @@
 'use strict';
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('Books', {
+    return queryInterface.createTable('Cotizaciones', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      title: {
-        allowNull: false,
+      establecimiento: {
         type: Sequelize.STRING
       },
-      author: {
-        allowNull: false,
+      farmacia: {
         type: Sequelize.STRING
       },
-      description: {
-        allowNull: false,
+      gestion: {
         type: Sequelize.STRING
       },
-      quantity: {
-        allowNull: false,
+      busqueda: {
+        type: Sequelize.STRING
+      },
+      reporteTramite: {
+        type: Sequelize.STRING
+      },
+      farmacias: {
+        type: Sequelize.BOOLEAN
+      },
+      vigente: {
+        type: Sequelize.BOOLEAN
+      },
+      numSolicitud: {
         type: Sequelize.INTEGER
-      },
-      userId: {
-        type: Sequelize.INTEGER,
-        onDelete: 'CASCADE',
-        references: {
-          model: 'Users',
-          key: 'id',
-          as: 'userId',
-        }
       },
       createdAt: {
         allowNull: false,
@@ -43,5 +42,7 @@ module.exports = {
       }
     });
   },
-  down: queryInterface /* , Sequelize */ =>  queryInterface.dropTable('Books')
+  down: (queryInterface, Sequelize) => {
+    return queryInterface.dropTable('Cotizaciones');
+  }
 };
