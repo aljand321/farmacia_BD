@@ -74,5 +74,11 @@ app.get('/api/Sum', Suministros.verSum);
 app.post('/api/AjusteNDIST', AjustesNegativosDIST.crearAjustesNDIST);
 app.get('/api/AjusteNDIST', AjustesNegativosDIST.verAjusteNDIST);
 
+//<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+// empisea las tablas de almacen
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+//medicamentos
+
 
 };
