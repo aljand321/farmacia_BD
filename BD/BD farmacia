@@ -30,3 +30,22 @@ sequelize model:create --name suministrosFracionales --attributes gestion:intege
 
 sequelize model:create --name ajustesNegativosDistribucion --attributes gestion:integer,establecimiento:string,farmacia:string,tipoTransaccion:string,busqueda:string,vigente:boolean,tipoImpresora:string,claseNotas:string,listaAnulados:string
 
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+tablas de almacen
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+sequelize model:create --name MedicamentosInsumos --attributes grupoAsignacion:string,codificacion:string,nombre:string,generico:string,unidadMedida:string,presentacion:string,concentracion:string
+
+sequelize model:create --name articulos --attributes grupoAsignacion:string,codificacion:string,nombre:string,unidadMedida:string
+
+sequelize model:create --name servicio --attributes grupoAsignacion:string,codificacion:string,nombre:string,descripcion:string
+
+sequelize model:create --name asignacioAlmacen --attributes codigo:integer,descripcion:string
+
+sequelize model:create --name almacen --attributes nombre:string,establecimiento:string,distribucionPaciente:string,lapsoR:string,nivleMinimo:string,nivelReserva:string,nivelMaximo:string,periodoR:string,metodoCosteo:string
+
+sequelize model:create --name proveedores --attributes nombreProveedores:string,email:string,direccion:string,telefono:integer,responsableAtencion:string
+
+
+
+

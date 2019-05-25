@@ -13,6 +13,15 @@ import Distr from '../controllers/distribucion';
 import Suministros from '../controllers/suministros';
 import AjustesNegativosDIST from '../controllers/ajustesNegativosDistribucion';
 
+
+//tablas almacen
+import Medicamento from '../controllers/medicamentosInsumos';
+import Articulos from '../controllers/articulos';
+import Servicio from '../controllers/servicio';
+import Asignacion from '../controllers/asignacion';
+import Alm from '../controllers/almacenes'
+import Proveedores from '../controllers/proveedores';
+
 export default (app) => {
 
 app.get('/api', (req, res) => res.status(200).send({
@@ -79,6 +88,30 @@ app.get('/api/AjusteNDIST', AjustesNegativosDIST.verAjusteNDIST);
 //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 //medicamentos
+app.post('/api/medicamento', Medicamento.createMed);
+app.get('/api/medicamento', Medicamento.verMEd);
+
+//articulos
+app.post('/api/articulos', Articulos.createArt);
+app.get('/api/articulos', Articulos.verArt);
+
+//servicio
+app.post('/api/servicio', Servicio.createServicio);
+app.get('/api/servicio', Servicio.verServicio);
+
+//asignacion
+app.post('/api/asignacion', Asignacion.createAsignacion);
+app.get('/api/asignacion', Asignacion.verAsignacion);
+
+//almacenes
+app.post('/api/Alm', Alm.createAlm);
+app.get('/api/Alm', Alm.verAlm);
+
+//proveedores
+app.post('/api/proveedores', Proveedores.createProveedores);
+app.get('/api/proveedores', Proveedores.verProveedores);
+
+
 
 
 };
